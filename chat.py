@@ -23,7 +23,13 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "JARVIS"
+with open('PC_Parts_Dataset/video-card.json', 'r') as d:
+    parts_data = json.load(d)
+
+for part in parts_data:
+    if part["price"] is not None:
+        print(part["name"]," : ", int(part["price"]))
+bot_name = "JARVIS" 
 print("Let's chat! Type 'quit' to exit")
 
 while True:
