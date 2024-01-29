@@ -111,6 +111,70 @@
       "responses":[
         "your name is kevin"
       ]
+    },{
+      "tag": "CPU",
+      "patterns":[
+        "give me recommendations for a CPU",
+        "Can I have some CPU options"
+      ]
+    },
+    {
+      "tag": "GPU",
+      "patterns":[
+        "give me recommendations for a GPU",
+        "give me recommendations for a graphics card",
+        "Can I have some GPU options",
+        "Can I have some graphics options"
+      ]
+    },
+    {
+      "tag": "PSU",
+      "patterns":[
+        "give me recommendations for a PSU",
+        "give me recommendations for a power supply unit",
+        "Can I have some PSU options",
+        "Can I have some power supply unit options"
+      ]
+    },
+    {
+      "tag": "Motherboard",
+      "patterns":[
+        "give me recommendations for a Motherboard",
+        "Can I have some Motherboard options"
+      ]
+    },
+    {
+      "tag": "RAM",
+      "patterns":[
+        "give me recommendations for a RAM",
+        "give me recommendations for a memory",
+        "Can I have some RAM options",
+        "Can I have some memory options"
+      ]
+    },
+    {
+      "tag": "Memory",
+      "patterns":[
+        "give me recommendations for a ROM",
+        "give me recommendations for a Memory",
+        "Can I have some ROM options",
+        "Can I have some Memory options"
+      ]
+    },
+    {
+      "tag": "Case",
+      "patterns":[
+        "give me recommendations for a Case",
+        "Can I have some Case options"
+      ]
+    },
+    {
+      "tag": "PC",
+      "patterns": [
+        "Can you help me build a PC",
+        "I want to build a PC",
+        "Can I get a budget for PC"
+      ]
     }
   ]
 }

@@ -3,7 +3,8 @@ import json
 import torch
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
-
+from PCBuilderWithBudget import *
+from PCPartsFinderWithBudget import *
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open('intents.json', 'r') as f:
@@ -34,6 +35,7 @@ model.eval()
 
 bot_name = "JARVIS" 
 print("Let's chat! Type 'quit' to exit")
+tagsList = ['CPU', 'GPU', 'PSU', 'Motherboard', 'RAM', 'Memory', 'Case']
 
 while True:
     sentence = input('You:')
@@ -54,6 +56,11 @@ while True:
     if prob.item() > 0.75:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                if tag in tagsList:
+                    getPrice(tag)
+                elif tag == "PC":
+                    PCBuilderWithBudget()
+                else:
+                    print(f"{bot_name}: {random.choice(intent['responses'])}")
     else:
         print(f"{bot_name} : I do not understand...")
