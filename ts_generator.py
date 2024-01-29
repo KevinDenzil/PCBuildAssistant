@@ -24,12 +24,14 @@ def TS_Generator():
         file_counter+=1
 
     
-    budgets = [60000, 70000, 80000, 90000, 100000, 120000, 150000, 170000, 200000]
+    budgets = []
+    for i in range(60000, 100000, 1000):
+        budgets.append(i)
     prices = []
     print("CPU\tGPU\tRAM\tROM\tMOBO\tCASE\tPSU")
     for budget in budgets:
-        entry = [budget*0.25, budget*0.30, budget*0.1, budget*0.075, budget*0.15, budget*0.05, budget*0.075]
+        entry = [budget, budget*0.25, budget*0.30, budget*0.1, budget*0.075, budget*0.15, budget*0.05, budget*0.075]
         prices.append(entry)
-        print(entry)
+    print(prices)
+    return prices
 
-TS_Generator()
