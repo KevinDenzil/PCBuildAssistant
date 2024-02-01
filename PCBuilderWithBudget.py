@@ -2,11 +2,9 @@ from PCPartsFinderWithBudget import *
 
 tagsList = ['CPU', 'GPU', 'PSU', 'Motherboard', 'RAM', 'Memory', 'Case']
 
-def PCBuilderWithBudget():
-    print("What is the starting price range(only a number is accepted) ?")
-    startingPrice = int(input())
-    print("What is the ending price range(only a number is accepted) ?")
-    endingPrice = int(input())
+def calculatePCPrice(arg, endingPrice):
+    startingPrice = int(arg[1])
+    endingPrice = int(endingPrice)
     percentageOfEachPart = {
         "CPU" : 0.25,
         "GPU": 0.30,
@@ -16,8 +14,24 @@ def PCBuilderWithBudget():
         "Case": 0.05,
         "PSU": 0.075
     }
+    op = ""
     for tag in tagsList:
-        print("Finding " + tag + " for price range:", startingPrice * percentageOfEachPart[tag], "to", endingPrice * percentageOfEachPart[tag])
-        getPrice("CPU", startingPrice * percentageOfEachPart[tag] , endingPrice * percentageOfEachPart[tag])
-        print("")
-  
+        op += "Finding " + tag + " for price range: " + str(startingPrice * percentageOfEachPart[tag]) + " to " + str(endingPrice * percentageOfEachPart[tag]) + "\n"
+        response = calculatePrice([tag, startingPrice * percentageOfEachPart[tag]] , endingPrice * percentageOfEachPart[tag])
+        res = json.loads(response)
+        op += res["response"] + "\n"
+            
+    return json.dumps({
+        "response": op,
+        "func" : "get_response",
+        "arg": -1
+    })
+
+def PCBuilderWithBudget(tag):
+    return json.dumps({
+        "response": "Finding options within your budget range, type YES to continue",
+        "func" : "getStartingPrice",
+        "arg": [tag]
+    })
+    
+   

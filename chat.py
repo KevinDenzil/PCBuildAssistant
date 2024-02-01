@@ -37,12 +37,9 @@ bot_name = "JARVIS"
 print("Let's chat! Type 'quit' to exit")
 tagsList = ['CPU', 'GPU', 'PSU', 'Motherboard', 'RAM', 'Memory', 'Case']
 
-while True:
-    sentence = input('You:')
-    if sentence == "quit":
-        break
-    sentence = tokenize(sentence)
-    x = bag_of_words(sentence, all_words)
+def get_response(msg):
+    msg = tokenize(msg)
+    x = bag_of_words(msg, all_words)
     x = x.reshape(1, x.shape[0])
     x = torch.from_numpy(x).to(device)
 
@@ -57,10 +54,21 @@ while True:
         for intent in intents["intents"]:
             if tag == intent["tag"]:
                 if tag in tagsList:
-                    getPrice(tag)
+                    return getPrice(tag)
                 elif tag == "PC":
-                    PCBuilderWithBudget()
+                    return PCBuilderWithBudget(tag)
                 else:
-                    print(f"{bot_name}: {random.choice(intent['responses'])}")
+                    jsonAnswer = {
+                        "response": random.choice(intent['responses']),
+                        "func": "get_response",
+                        "arg": -1
+                    }
+                    return json.dumps(jsonAnswer)
     else:
-        print(f"{bot_name} : I do not understand...")
+        jsonAnswer = {
+            "response": "I don't understand.....",
+            "func": "get_response",
+            "arg": -1
+        }
+        return json.dumps(jsonAnswer)
+
