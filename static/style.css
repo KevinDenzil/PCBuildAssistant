@@ -252,6 +252,7 @@ format{
   border-radius : 5px;
   padding : 5px;
   font-size: 1.2rem;
+  margin-bottom: 20px;
 
 }
 
@@ -259,6 +260,8 @@ format{
   margin-left: auto;
   background: #BB86FC;
   margin-right: 15px;
+  margin-bottom: 20px;
+
 }
 
 .messages__item--visitor {
@@ -266,7 +269,7 @@ format{
   margin-right: auto;
   display: inline-block;
   margin-left: 8px;
-
+  margin-bottom: 20px;
 
 }
 
@@ -274,7 +277,7 @@ format{
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 85%;
+  height: 70%;
 }
 
 .main_avatar{

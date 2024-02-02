@@ -8,7 +8,10 @@
         "How are you",
         "Is anyone there?",
         "Hello",
-        "Good day"
+        "Good day",
+        "Wassup",
+        "Yo",
+        "vanakkam" 
       ],
       "responses": [
         "Hey :-)",
@@ -77,7 +80,18 @@
       ],
       "responses": [
         "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "What did the buffalo say when his son left for college? Bison.",
+        "A perfectionist walked into a bar...apparently, the bar wasn't set high enough",
+        "I ate a clock yesterday, it was very time-consuming",
+        "Never criticize someone until you've walked a mile in their shoes. That way, when you criticize them, they won't be able to hear you from that far away. Plus, you'll have their shoes.",
+        "The world tongue-twister champion just got arrested. I hear they're gonna give him a really tough sentence.",
+        "I own the world's worst thesaurus. Not only is it awful, it's awful.",
+        "What did the traffic light say to the car? \"Don't look now, I'm changing.\"",
+        "What do you call a snowman with a suntan? A puddle.",
+        "How does a penguin build a house? Igloos it together",
+        "I went to see the doctor about my short-term memory problems – the first thing he did was make me pay in advance",
+        "As I get older and I remember all the people I’ve lost along the way, I think to myself, maybe a career as a tour guide wasn’t for me.",
+        "o what if I don't know what 'Armageddon' means? It's not the end of the world."
       ]
     },
     {
@@ -88,9 +102,9 @@
         "What can i call you?"
       ],
       "responses": [
-        "My name is Sam! How can i help you?",
-        "Sam",
-        "Hi i'm JARVIS, a chatbot created by Kevin"
+        "My name is BuildBuddy! How can i help you?",
+        "BuildBuddy",
+        "Hi i'm BuildBuddy, a chatbot created by II CSE - B Students"
       ]
     },
     {
@@ -115,7 +129,10 @@
       "tag": "CPU",
       "patterns":[
         "give me recommendations for a CPU",
-        "Can I have some CPU options"
+        "Can I have some CPU options",
+        "i'm looking for a cpu",
+        "can you recommend me a cpu",
+        "cpu recommendations"
       ]
     },
     {
@@ -124,7 +141,9 @@
         "give me recommendations for a GPU",
         "give me recommendations for a graphics card",
         "Can I have some GPU options",
-        "Can I have some graphics options"
+        "Can I have some graphics options",
+        "gpu recommendations",
+        "im looking for a gpu"
       ]
     },
     {
@@ -133,14 +152,18 @@
         "give me recommendations for a PSU",
         "give me recommendations for a power supply unit",
         "Can I have some PSU options",
-        "Can I have some power supply unit options"
+        "Can I have some power supply unit options",
+        "im looking for a psu",
+        "i want to purchase a power supply unit"
       ]
     },
     {
       "tag": "Motherboard",
       "patterns":[
         "give me recommendations for a Motherboard",
-        "Can I have some Motherboard options"
+        "Can I have some Motherboard options",
+        "im looking for a motherboard",
+        "what motherboards do you suggest"
       ]
     },
     {
@@ -158,14 +181,17 @@
         "give me recommendations for a ROM",
         "give me recommendations for a Memory",
         "Can I have some ROM options",
-        "Can I have some Memory options"
+        "Can I have some Memory options",
+        "can you suggest some storage options"
       ]
     },
     {
       "tag": "Case",
       "patterns":[
         "give me recommendations for a Case",
-        "Can I have some Case options"
+        "Can I have some Case options",
+        "im looking for a case"
+        
       ]
     },
     {
@@ -173,8 +199,43 @@
       "patterns": [
         "Can you help me build a PC",
         "I want to build a PC",
-        "Can I get a budget for PC"
+        "Can I get a budget for PC",
+        "im looking for a PC"
       ]
-    }
+    },
+    {
+      "tag": "appreciate",
+      "patterns": [
+          "You are awesome",
+          "you are the best",
+          "you are great",
+          "you are good"
+      ],
+      "responses": [
+          "Thank you!"
+      ]
+  },
+    {
+      "tag": "riddle",
+            
+      "patterns": [
+                "Ask me a riddle",
+                "Ask me a question",
+                "Riddle",
+                "tell me a riddle",
+                "do you have some riddles?"
+            ],      
+      "responses": [
+                "What two things can you never eat for breakfast?.....Lunch and Dinner!",
+                "What word is spelled incorrectly in every single dictionary?.....Incorrectly",
+                " How can a girl go 25 days without sleep?.....She sleeps and night!",
+                "How do you make the number one disappear?.....Add the letter G and it’s 'gone'!",
+                " What will you actually find at the end of every rainbow?.....The letter 'w'",
+                "What can be caught but never thrown?.....A cold!",
+                "What has a thumb and four fingers but is not actually alive?.....Your Gloves!",
+                " What 5-letter word becomes shorter when you add two letters to it?.....Short",
+                "Why can't a bike stand on it's own?.....It is two-tired."
+            ]
+      }
   ]
 }

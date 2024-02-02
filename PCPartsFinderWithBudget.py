@@ -8,13 +8,13 @@ def getStartingPrice(tag, random):
         response = {
         "response": "Exiting Parts Recommender...",
         "func": "get_response",
-        "arg": -1
-    }
-    response = {
-        "response": "What is the starting price range(only a number is accepted) ?",
-        "func": "getEndingPrice",
-        "arg": [tag]
-    }
+        "arg": -1}
+    else:
+        response = {
+            "response": "What is the starting price range(only a number is accepted) ?",
+            "func": "getEndingPrice",
+            "arg": [tag]
+        }
     return json.dumps(response)
 
 def getEndingPrice(arg, startingPrice):

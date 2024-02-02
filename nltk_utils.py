@@ -8,6 +8,8 @@ stemmer = PorterStemmer()
 def tokenize(sentence):
     return nltk.word_tokenize(sentence)
 
+print(tokenize("Hello how are you"))
+
 def stem(word):
     return stemmer.stem(word.lower())
 
