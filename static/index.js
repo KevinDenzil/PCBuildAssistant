@@ -62,8 +62,9 @@ class chatBox {
     updateChatText(chatbox) {
         var html = '';
         this.messages.slice().forEach(function (item, index) {
+            const avatarImage = item.name === "JENSON" ? "static/icons/icon.jpg" : "static/icons/icon2.jpg";
             if (item.name === "JENSON") {
-                html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
+                html += `<span class="avatar"><img src="${avatarImage}" alt="${item.name} Avatar"></span>` + '    <div class="messages__item messages__item--visitor">' + item.message + '</div>'
             }
             else {
                 html += '<div class="messages__item messages__item--operator">' + item.message + '</div>'
